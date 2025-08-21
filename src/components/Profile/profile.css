@@ -1,0 +1,207 @@
+
+/* Profile modern, gradient, card, avatar tròn, responsive */
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  gap: 48px;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f0f4ff 100%);
+  padding: 32px 0 64px 0;
+}
+
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(255,255,255,0.98);
+  padding: 38px 38px 32px 38px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.13);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: profile-fade-in 0.9s cubic-bezier(.4,2,.6,1) 0.1s forwards;
+}
+
+@keyframes profile-fade-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.profile-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px 0 rgba(59,130,246,0.18), 0 4px 16px 0 rgba(0,0,0,0.07);
+}
+
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 4px solid #dbeafe;
+  box-shadow: 0 4px 18px 0 rgba(59,130,246,0.10);
+  background: #f0f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-info h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.profile-info p {
+  color: #334155;
+  margin: 8px 0;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.info-list li {
+  margin: 10px 0;
+  font-size: 1.05rem;
+  color: #334155;
+  display: flex;
+  align-items: center;
+}
+
+.info-list span {
+  font-weight: bold;
+  color: #2563eb;
+  margin-right: 8px;
+  font-size: 1.08rem;
+}
+
+.profile-skill-card {
+  margin: 44px auto 0 auto;
+  background: rgba(255,255,255,0.98);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(59,130,246,0.13);
+  padding: 38px 38px 32px 38px;
+  max-width: 1100px;
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: profile-fade-in 0.9s cubic-bezier(.4,2,.6,1) 0.3s forwards;
+}
+
+.profile-skill-card h3 {
+  color: #2563eb;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.profile-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.profile-skill-item {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(59,130,246,0.10);
+  padding: 28px 32px 22px 32px;
+  min-width: 170px;
+  max-width: 240px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.22s, transform 0.22s;
+  border: 2px solid #e0e7ff;
+}
+
+.profile-skill-item:hover {
+  box-shadow: 0 10px 32px rgba(59,130,246,0.18);
+  transform: translateY(-6px) scale(1.05);
+  border-color: #3b82f6;
+}
+
+.profile-skill-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #3b82f6;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-skill-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.profile-skill-desc {
+  font-size: 1.01rem;
+  color: #475569;
+  margin-bottom: 2px;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 10px;
+    gap: 18px;
+  }
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  .profile-skill-card {
+    padding: 18px 6px 18px 6px;
+  }
+}
