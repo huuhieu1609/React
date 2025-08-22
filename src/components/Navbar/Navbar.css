@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* Logo block (avatar + name + subtitle) */
 .navbar-logo-block {
   display: flex;

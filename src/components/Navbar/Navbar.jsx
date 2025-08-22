@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,11 +18,10 @@ const Navbar = () => {
 					<div className="navbar-subtitle">Fullstack Developer</div>
 				</div>
 				<ul className="navbar-menu">
-					<li><Link to="/">Home</Link></li>
-					<li><Link to="/about">About</Link></li>
-					<li><Link to="/profile">Services</Link></li>
-					<li><Link to="/projects">Portfolio</Link></li>
-					<li><Link to="/contact">Contact</Link></li>
+					<li><a href="#about-section">About</a></li>
+					<li><a href="#profile-section">Services</a></li>
+					<li><a href="#project-section">Portfolio</a></li>
+					<li><a href="#hotline-section">Contact</a></li>
 				</ul>
 				<div className="navbar-social">
 					<a href="https://www.facebook.com/tran.hieu.565760" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="navbar-social-icon">
