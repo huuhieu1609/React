@@ -1,37 +1,88 @@
 
-.contact-container {
-  max-width: 540px;
-  margin: 56px auto 0 auto;
-  padding: 36px 32px 28px 32px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-  position: relative;
-  z-index: 2;
-  animation: hotline-fade-in 0.8s cubic-bezier(.4,2,.6,1);
-}
 
-@keyframes hotline-fade-in {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: none; }
+/* Main layout */
+.hotline-main {
+  max-width: 1200px;
+  margin: 48px auto 0 auto;
+  padding: 0 16px 32px 16px;
 }
-
-.contact-container h2 {
+.hotline-title {
   text-align: center;
-  margin-bottom: 28px;
-  font-size: 2rem;
-  color: #2563eb;
-  font-weight: 700;
+  font-size: 2.6rem;
+  color: #222e3a;
+  font-weight: 800;
+  margin-bottom: 18px;
   letter-spacing: 1px;
 }
-
-
-.contact-form input,
-.contact-form textarea {
+.hotline-divider {
+  width: 90%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb 60%, #0ea5e9 100%);
+  margin: 0 auto 36px auto;
+  border-radius: 2px;
+}
+.hotline-grid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hotline-info-list {
+  flex: 0 0 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hotline-info-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(59,130,246,0.10);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 28px 22px 28px;
+  min-height: 90px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.hotline-info-card:hover {
+  box-shadow: 0 8px 32px rgba(59,130,246,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.hotline-info-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotline-info-label {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #222e3a;
+  margin-bottom: 2px;
+}
+.hotline-info-value {
+  color: #475569;
+  font-size: 1.05rem;
+}
+.hotline-form-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(59,130,246,0.10);
+  padding: 36px 32px 28px 32px;
+  min-width: 320px;
+  max-width: 700px;
+}
+.hotline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hotline-form input,
+.hotline-form textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 14px 18px;
-  margin: 12px 0;
   border: 1.5px solid #dbeafe;
   border-radius: 10px;
   font-size: 1.08rem;
@@ -40,22 +91,20 @@
   outline: none;
   box-shadow: 0 2px 8px rgba(59,130,246,0.04);
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
+.hotline-form input:focus,
+.hotline-form textarea:focus {
   border: 1.5px solid #2563eb;
   box-shadow: 0 4px 16px rgba(59,130,246,0.10);
 }
-
-.contact-form textarea {
+.hotline-form textarea {
   resize: vertical;
   min-height: 110px;
   max-height: 260px;
 }
-
-.contact-form button {
+.hotline-form button {
   width: 100%;
-  padding: 14px;
-  background: linear-gradient(90deg, #10b981 60%, #3b82f6 100%);
+  padding: 16px;
+  background: linear-gradient(90deg, #0077cc 60%, #2563eb 100%);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -66,25 +115,55 @@
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   margin-top: 10px;
 }
-.contact-form button:hover {
-  background: linear-gradient(90deg, #3b82f6 60%, #10b981 100%);
+.hotline-form button:hover {
+  background: linear-gradient(90deg, #2563eb 60%, #0077cc 100%);
   box-shadow: 0 6px 24px rgba(59,130,246,0.18);
   transform: translateY(-2px) scale(1.04);
 }
-@media (max-width: 600px) {
-  .contact-container {
+
+@media (max-width: 1000px) {
+  .hotline-grid {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .hotline-info-list {
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+  }
+  .hotline-info-card {
+    min-width: 180px;
+    flex: 1;
+  }
+}
+@media (max-width: 700px) {
+  .hotline-main {
+    padding: 0 2px 18px 2px;
+  }
+  .hotline-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .hotline-divider {
+    margin-bottom: 18px;
+  }
+  .hotline-info-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hotline-info-card {
+    padding: 16px 10px 12px 10px;
+  }
+  .hotline-form-card {
     padding: 14px 4px 10px 4px;
   }
-  .contact-container h2 {
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-  }
-  .contact-form input,
-  .contact-form textarea {
+  .hotline-form input,
+  .hotline-form textarea {
     font-size: 1rem;
     padding: 10px 8px;
   }
-  .contact-form button {
+  .hotline-form button {
     font-size: 1rem;
     padding: 10px;
   }

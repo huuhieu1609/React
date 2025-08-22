@@ -13,12 +13,13 @@ const Navbar = () => {
 										className="navbar-avatar"
 									/>
 									Hữu Hiếu
+                             
 								</div>
 				<ul className="navbar-menu">
 					<li><Link to="/about">Home</Link></li>
 					<li><Link to="/profile">Profile</Link></li>
 					<li><Link to="/projects">My Portfolio</Link></li>
-					<li><Link to="/contact">Liên hệ</Link></li>
+					<li><Link to="/contact">Contact</Link></li>
 				</ul>
 			</div>
 		</nav>
