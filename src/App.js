@@ -4,6 +4,8 @@ import About from "./components/About/About";
 import Profile from "./components/Profile/profile";
 import Project from "./components/Project/project";
 import Hotline from "./components/Hotline/hotline";
+import "./components/Home/Home.css";
+import Home from "./components/Home/Home";
 
 import "./App.css";
 import "./components/About/About.css";
@@ -18,6 +20,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
+       
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/projects" element={<Project />} />

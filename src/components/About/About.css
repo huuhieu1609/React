@@ -1,3 +1,187 @@
+/* Hiệu ứng động ngoài card about */
+.about-hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 30%, #60a5fa55 0, #fff0 40%),
+              radial-gradient(circle at 80% 70%, #fbbf2455 0, #fff0 40%),
+              radial-gradient(circle at 70% 20%, #10b98144 0, #fff0 40%),
+              radial-gradient(circle at 30% 80%, #f472b644 0, #fff0 40%);
+  animation: about-bg-move-hero 12s linear infinite alternate;
+}
+@keyframes about-bg-move-hero {
+  0% {
+    background-position: 20% 30%, 80% 70%, 70% 20%, 30% 80%;
+    filter: blur(0px);
+  }
+  50% {
+    background-position: 25% 35%, 75% 65%, 65% 25%, 35% 75%;
+    filter: blur(2.5px);
+  }
+  100% {
+    background-position: 20% 30%, 80% 70%, 70% 20%, 30% 80%;
+    filter: blur(0px);
+  }
+}
+.about-hero-bg {
+  position: relative;
+  z-index: 1;
+}
+.about-hero-card {
+  z-index: 2;
+}
+/* === ABOUT HERO CARD STYLE === */
+.about-hero-bg {
+  min-height: 80vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 60px 0 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero-card {
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.13);
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 56px 64px 56px 64px;
+  position: relative;
+  z-index: 2;
+  min-width: 1000px;
+  max-width: 2000px;
+  min-height: 400px;
+  animation: about-fade-in 0.8s cubic-bezier(.4,2,.6,1);
+}
+@keyframes about-fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.about-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 320px;
+}
+.about-hero-hi {
+  font-size: 1.5rem;
+  color: #4a5568;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.about-hero-name {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #222e3a;
+  margin-bottom: 0px;
+  line-height: 1.1;
+}
+.about-hero-role {
+  font-size: 2rem;
+  color: #2196f3;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.about-hero-underline {
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb 60%, #0ea5e9 100%);
+  border-radius: 2px;
+  margin: 12px 0 24px 0;
+}
+.about-hero-btns {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+.about-hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #2563eb;
+  background: #fff;
+  border: 2px solid #2196f3;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.about-hero-btn.main {
+  background: linear-gradient(90deg, #2196f3 60%, #0ea5e9 100%);
+  color: #fff;
+  border: none;
+}
+.about-hero-btn:hover, .about-hero-btn.main:hover {
+  background: linear-gradient(90deg, #0ea5e9 60%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+.about-hero-avatar-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+}
+.about-hero-avatar {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  background: #e0e7ef;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.about-hero-avatar:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 12px 36px rgba(59,130,246,0.22);
+}
+/* Hiệu ứng bóng mờ tròn */
+.about-hero-bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  z-index: 1;
+  filter: blur(1.5px);
+  pointer-events: none;
+}
+.b1 { width: 120px; height: 120px; background: #2196f3; top: 30px; left: 30px; animation: bubble-move1 7s infinite alternate; }
+.b2 { width: 80px; height: 80px; background: #fbbf24; bottom: 40px; left: 120px; animation: bubble-move2 8s infinite alternate; }
+.b3 { width: 90px; height: 90px; background: #10b981; top: 60px; right: 80px; animation: bubble-move3 6s infinite alternate; }
+.b4 { width: 60px; height: 60px; background: #f472b6; bottom: 60px; right: 60px; animation: bubble-move4 9s infinite alternate; }
+.b5 { width: 40px; height: 40px; background: #2563eb; top: 50%; left: 50%; animation: bubble-move5 10s infinite alternate; }
+@keyframes bubble-move1 { 0%{top:30px;left:30px;} 100%{top:10px;left:80px;} }
+@keyframes bubble-move2 { 0%{bottom:40px;left:120px;} 100%{bottom:80px;left:60px;} }
+@keyframes bubble-move3 { 0%{top:60px;right:80px;} 100%{top:100px;right:40px;} }
+@keyframes bubble-move4 { 0%{bottom:60px;right:60px;} 100%{bottom:20px;right:100px;} }
+@keyframes bubble-move5 { 0%{top:50%;left:50%;} 100%{top:60%;left:60%;} }
+@media (max-width: 1000px) {
+  .about-hero-card {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 8px;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .about-hero-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  .about-hero-content {
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
 /* Card giữa cho about */
 .about-card {
   max-width: 900px;

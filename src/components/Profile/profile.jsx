@@ -23,14 +23,15 @@ const ProfileAbout = () => {
             người dùng và luôn học hỏi công nghệ mới.
           </p>
           <ul className="info-list">
-            <li><span>📍 Địa chỉ:</span> Đà Nẵng, Việt Nam</li>
-            <li><span>📧 Email:</span> huuhieutt12.1@gmail.com</li>
-            <li><span>✨ Sở thích:</span> VueJs,React</li>
+            <li><span> Địa chỉ:</span> Đà Nẵng, Việt Nam</li>
+            <li><span> Email:</span> huuhieutt12.1@gmail.com</li>
+       
+            <li><span> Hotline:</span>0342211914</li>
           </ul>
         </div>
       </div>
       <div className="profile-skill-card">
-        <h3>Kỹ năng & Năng lực</h3>
+        <h3>Skill & Abilities</h3>
         <div className="profile-skill-list">
           {/* HTML/CSS */}
           <div className="profile-skill-item">
