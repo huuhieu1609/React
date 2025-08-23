@@ -1,3 +1,31 @@
+/* Nút hotline bên dưới card about */
+.about-hotline-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.about-hotline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #10b981;
+  background: linear-gradient(90deg, #e0f7fa 60%, #a7f3d0 100%);
+  box-shadow: 0 2px 12px rgba(16,185,129,0.10);
+  border: 2px solid #10b98122;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.about-hotline-btn:hover {
+  background: linear-gradient(90deg, #10b981 60%, #3b82f6 100%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(16,185,129,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
 /* Hiệu ứng động ngoài card about */
 .about-hero-bg::before {
   content: "";
@@ -39,7 +67,7 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  padding: 60px 0 60px 0;
+  padding: 100px 0 100px 0;
   position: relative;
   overflow: hidden;
 }
