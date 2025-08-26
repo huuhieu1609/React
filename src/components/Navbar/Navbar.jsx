@@ -9,7 +9,7 @@ const Navbar = () => {
 				<div className="navbar-logo-block">
 					<div className="navbar-logo">
 						<img
-							src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/526583688_1188166543335182_4103561911743280463_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeH-nKrJ0D_Usfdxcykn56mg4L3NfQGK6cDgvc19AYrpwFYzYIVEqpGCrHNine0fDMgBbilnY5NqsdNxoQJo3jbX&_nc_ohc=hUpDPPAjJXEQ7kNvwHZQZPb&_nc_oc=AdlsCrD9EXJyqOhIXsrDPGqCu2Zowa7JCwpw2TzR1y63pxN6Jna9xOfpoN6owDhu6MI&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=aNnUZYbg0vJIBrGmndyCyA&oh=00_AfVcpRSoL7KZ_vm52gJQlT4j9hKsBBLLUIZJlC8mGY_mbA&oe=68AB7EB5"
+							src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/526583688_1188166543335182_4103561911743280463_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH-nKrJ0D_Usfdxcykn56mg4L3NfQGK6cDgvc19AYrpwFYzYIVEqpGCrHNine0fDMgBbilnY5NqsdNxoQJo3jbX&_nc_ohc=z56yqbz8amgQ7kNvwEduanz&_nc_oc=Adk0XmFSkiy3rp__HakkfS_MNd3kGQs386b-Ij23wmstI548nvZZapEA54upTOVfIDA&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=rQPw6umV-YK_APlZF5vcOw&oh=00_AfUlDMdzrRJFQvPiHF4bGhChwgniV-WmfyKUqm7nfVVMTw&oe=68B308F7"
 							alt="avatar"
 							className="navbar-avatar"
 						/>
