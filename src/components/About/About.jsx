@@ -33,6 +33,20 @@ const About = () => {
                     <div className="about-hero-bubble b4" />
                     <div className="about-hero-bubble b5" />
                 </div>
+              <div className="about-bg-network">
+  <div className="about-bg-dot dot1"></div>
+  <div className="about-bg-dot dot2"></div>
+  <div className="about-bg-dot dot3"></div>
+  <div className="about-bg-dot dot4"></div>
+  <div className="about-bg-dot dot5"></div>
+  <div className="about-bg-dot dot6"></div>
+  <div className="about-bg-dot dot7"></div>
+  <div className="about-bg-line line1"></div>
+  <div className="about-bg-line line2"></div>
+  <div className="about-bg-line line3"></div>
+  <div className="about-bg-line line4"></div>
+  <div className="about-bg-line line5"></div>
+</div>
             </div>
             {/* Xóa nút hotline bên dưới card */}
         </>
